@@ -64,6 +64,7 @@ export default async function handler(req, res) {
                 console.log('creating....')
                 const attendance = await Attendance.create({ courseCode: data });
                 await mongoose.connection.syncIndexes();
+                await new Promise(resolve => setTimeout(resolve, 10000));//10 sec wait
                 attendance.dates.push(date)
                 attendance.attendanceData.push(today);
                 const savedDoc = await attendance.save();
