@@ -1,5 +1,5 @@
 import React from "react";
-
+import { signIn } from "next-auth/react";
 const Introduction = () => {
   return (
     <section className="bg-gray-800 text-white py-12 px-6">
@@ -24,7 +24,8 @@ const Introduction = () => {
               Join us today and revolutionize attendance management with
               FaceBlock. Get started now!
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 py-3 px-6 rounded-md text-xl font-semibold">
+            <button onClick={() => signIn()}
+             className="bg-blue-500 hover:bg-blue-600 py-3 px-6 rounded-md text-xl font-semibold">
               Get Started
             </button>
           </div>
