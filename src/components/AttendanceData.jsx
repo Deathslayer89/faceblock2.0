@@ -160,7 +160,6 @@ const AttendanceTable = () => {
     return (
       <div className="flex-row">
         <button className="bg-blue-500 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none" onClick={downloadAsPdf}>Download as PDF</button>
-        <button className="bg-blue-500 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none ml-10" onClick={downloadAsExcel}>Download as Excel</button>
       </div>
     );
   };
