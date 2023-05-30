@@ -22,8 +22,8 @@ const CourseHome = ({ course }) => {
       alert("Enter date in dd-mm-yyyy format and try again.");
       return;
     }
-    window.open("http://192.168.240.225:5000", "_blank");
-    const response2 = await fetch("http://192.168.240.225:5000/api", {
+    window.open("https://192.168.240.160:5000", "_blank");
+    const response2 = await fetch("https://192.168.240.160:5000/api", {
       method: "POST",
       headers: {
         "content-Type": "application/json",
@@ -35,7 +35,7 @@ const CourseHome = ({ course }) => {
     setTodaysAttendance(result);
     if (Object.keys(result).length == 0) {
       console.log("got empty data");
-      const response = await fetch("http://192.168.240.225:5000/api/resend", {
+      const response = await fetch("https://192.168.240.160:5000/api/resend", {
         method: "GET",
       });
       const second_result = await response.json();
